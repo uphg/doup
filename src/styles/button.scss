@@ -1,0 +1,7 @@
+@import "./var";
+
+.do-button {
+  font-size: $font-size;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+}

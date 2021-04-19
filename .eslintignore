@@ -2,3 +2,4 @@ build/*.js
 
 public
 dist
+tests
