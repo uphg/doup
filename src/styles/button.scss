@@ -29,4 +29,28 @@
     color: $__color-primary-dark;
     border-color: $__color-primary-dark;
   }
+  &.is-loading {
+    color: $__color-text-looming;
+    border-color: $__color-text-looming;
+  }
+  & > .do-icon-loading {
+    animation: spinner 1s cubic-bezier(.6, 0, .4, 1) infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner{
+  0% {
+    transform:rotate(0deg)
+  } to {
+    transform:rotate(359deg)
+  }
 }

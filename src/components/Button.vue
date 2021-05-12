@@ -1,12 +1,12 @@
 <template>
-  <button class="do-button" @click="$emit('click')">
+  <button class="do-button" :class="{ 'is-loading': loading }" @click="$emit('click')">
     <svg v-if="icon && !loading" class="do-icon" aria-hidden="true">
       <use :xlink:href="`#icon-${icon}`" />
     </svg>
-    <svg v-if="loading" class="do-icon" :class="{ 'do-loading': loading }" aria-hidden="true">
+    <svg v-if="loading" class="do-icon-loading" aria-hidden="true">
       <use xlink:href="#icon-spinner" />
     </svg>
-    <span class="do-button__content" :class="{ 'do-loading-text': loading }">
+    <span class="do-button__content">
       <slot />
     </span>
   </button>
@@ -28,4 +28,3 @@ export default {
 </script>
 <style lang="scss" src="../styles/button.scss"></style>
 <style lang="scss" src="../styles/icon.scss"></style>
-<style lang="scss" src="../styles/loading.scss"></style>
