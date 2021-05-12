@@ -1,6 +1,6 @@
 
 <template>
-  <svg class="do-icon" :class="{ [`icon-${iconName}`]: iconName }" aria-hidden="true">
+  <svg :class="{ [`do-icon-${name}`]: name }" aria-hidden="true">
     <use :xlink:href="iconName" />
   </svg>
 </template>

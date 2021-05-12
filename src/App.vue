@@ -2,16 +2,20 @@
   <div id="app">
     <h2>按钮</h2>
     <div class="row">
+      <span class="label">普通按钮：</span>
       <do-button>主要按钮</do-button>
     </div>
     <div class="row">
-      <do-button icon="bug">ICON按钮</do-button>
+      <span class="label">Icon 按钮：</span>
+      <do-button icon="bug">主要按钮</do-button>
     </div>
     <div class="row">
-      <do-button :loading="true">Loading按钮</do-button>
+      <span class="label">Loading 按钮：</span>
+      <do-button :loading="isLoading" @click="isLoading = !isLoading">主要按钮</do-button>
     </div>
     <h2>倒计时</h2>
     <div class="row">
+      <span class="label">倒计时按钮：</span>
       <do-countdown
         ref="countdown"
         :count="5"
@@ -22,6 +26,7 @@
     </div>
     <h2>Icon 图标</h2>
     <div class="row icon-list">
+      <span class="label">Icon 组件：</span>
       <do-icon name="alarm" />
       <do-icon name="aspect-ratio" />
     </div>
@@ -42,6 +47,7 @@ export default {
   },
   data() {
     return {
+      isLoading: false,
       isCount: false
     }
   },
@@ -65,13 +71,22 @@ export default {
     right: 20px;
   }
 }
+h2 {
+  text-align: center;
+}
 .row {
   margin: {
     top: 20px;
     bottom: 20px;
   }
 }
-.icon-list > .do-icon {
+.icon-list > [class^="do-icon-"] {
   margin-right: 20px;
+}
+.label {
+  text-align: right;
+  width: 120px;
+  display: inline-block;
+  padding-right: 10px;
 }
 </style>
