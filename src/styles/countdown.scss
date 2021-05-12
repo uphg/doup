@@ -1,0 +1,9 @@
+@import "./common/variable.scss";
+
+.do-countdown {
+  cursor: pointer;
+  font-size: $__font-size;
+  &.disable {
+    color: $__color-text-looming;
+  }
+}
