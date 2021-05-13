@@ -3,15 +3,18 @@
     <h2>按钮</h2>
     <div class="row">
       <span class="label">普通按钮：</span>
-      <do-button>主要按钮</do-button>
+      <do-button>默认按钮</do-button>
+      <do-button type="primary">默认按钮</do-button>
     </div>
     <div class="row">
       <span class="label">Icon 按钮：</span>
-      <do-button icon="bug">主要按钮</do-button>
+      <do-button icon="bug">默认按钮</do-button>
+      <do-button type="primary" icon="bug">默认按钮</do-button>
     </div>
     <div class="row">
       <span class="label">Loading 按钮：</span>
-      <do-button :loading="isLoading" @click="isLoading = !isLoading">主要按钮</do-button>
+      <do-button :loading="isLoading" @click="isLoading = !isLoading">默认按钮</do-button>
+      <do-button type="primary" :loading="isLoading" @click="isLoading = !isLoading">默认按钮</do-button>
     </div>
     <h2>倒计时</h2>
     <div class="row">
