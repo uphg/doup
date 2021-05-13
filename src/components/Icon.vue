@@ -22,9 +22,3 @@ export default {
 }
 </script>
 <style lang="scss" src="../styles/icon.scss"></style>
-<!--<style lang="scss">-->
-<!--.do-icon {-->
-<!--  vertical-align: -0.15em;-->
-<!--  overflow: hidden;-->
-<!--}-->
-<!--</style>-->

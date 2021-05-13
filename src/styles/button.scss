@@ -34,7 +34,7 @@
     border-color: $__color-text-looming;
   }
   & > .do-icon-loading {
-    animation: spinner 1s cubic-bezier(.6, 0, .4, 1) infinite;
+    animation: spin 1s cubic-bezier(.6, 0, .4, 1) infinite;
   }
 }
 
@@ -47,10 +47,10 @@
   }
 }
 
-@keyframes spinner{
-  0% {
-    transform:rotate(0deg)
-  } to {
-    transform:rotate(359deg)
-  }
-}
+// @keyframes spinner{
+//   0% {
+//     transform:rotate(0deg)
+//   } to {
+//     transform:rotate(359deg)
+//   }
+// }
