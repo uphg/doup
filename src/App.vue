@@ -38,12 +38,12 @@
     </div>
     <h2>按钮组</h2>
     <div class="row button-group">
-      <do-button-group style="margin-right: 20px; margin-">
+      <do-button-group style="margin-right: 20px; margin-bottom: 20px;">
         <do-button>上一页</do-button>
         <do-button>当前页</do-button>
         <do-button>下一页</do-button>
       </do-button-group>
-      <do-button-group>
+      <do-button-group style="margin-right: 20px; margin-bottom: 20px;">
         <do-button type="primary">上一页</do-button>
         <do-button type="primary">当前页</do-button>
         <do-button type="primary">下一页</do-button>
@@ -53,6 +53,13 @@
         <do-button type="error">当前页</do-button>
         <do-button type="error">下一页</do-button>
       </do-button-group>
+      <do-button-group>
+        <div />
+        <do-button>上一页</do-button>
+        <do-button>当前页</do-button>
+        <do-button>下一页</do-button>
+      </do-button-group>
+      <do-button-group />
     </div>
   </div>
 </template>
@@ -80,7 +87,6 @@ export default {
   methods: {
     clickCount() {
       if (!this.isCount) {
-        console.log('开启倒计时')
         this.$refs['countdown'].startCount()
       }
     }
