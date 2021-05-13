@@ -62,6 +62,28 @@
       border-color: $__color-primary-light;
     }
   }
+  &__error {
+    color: #fff;
+    background-color: $__color-error;
+    border-color: $__color-error;
+    &:focus{
+      outline: none;
+      background-color: $__color-error-light;
+      border-color: $__color-error-light;
+    }
+    &:hover {
+      background-color: $__color-error-light;
+      border-color: $__color-error-light;
+    }
+    &:active {
+      background-color: $__color-error-dark;
+      border-color: $__color-error-dark;
+    }
+    &.is-loading {
+      background-color: $__color-error-light;
+      border-color: $__color-error-light;
+    }
+  }
 }
 .do-button__primary {
   color: #fff;

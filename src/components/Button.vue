@@ -27,7 +27,7 @@ export default {
       type: String,
       default: 'default',
       validator(value) {
-        return value === 'primary' || 'default'
+        return value === 'default' || value === 'primary' || value === 'error'
       }
     }
   }

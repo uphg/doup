@@ -8,9 +8,4 @@ export default {
   name: 'DoButtonGroup'
 }
 </script>
-<style lang="scss">
-.do-button-group {
-  display: inline-flex;
-  vertical-align: middle;
-}
-</style>
+<style lang="scss" src="../styles/button-group.scss"></style>
