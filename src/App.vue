@@ -3,21 +3,24 @@
     <h2>按钮</h2>
     <div class="row">
       <span class="label">普通按钮：</span>
-      <do-button>默认按钮</do-button>
-      <do-button type="primary">主要按钮</do-button>
+      <do-button>主要按钮</do-button>
+      <do-button type="primary" bright>主要按钮</do-button>
       <do-button type="error">警告按钮</do-button>
+      <do-button type="error" bright>警告按钮</do-button>
     </div>
     <div class="row">
       <span class="label">Icon 按钮：</span>
       <do-button icon="bug">主要按钮</do-button>
-      <do-button type="primary" icon="bug">默认按钮</do-button>
+      <do-button type="primary" icon="bug" bright>主要按钮</do-button>
       <do-button type="error" icon="bug">警告按钮</do-button>
+      <do-button type="error" icon="bug" bright>警告按钮</do-button>
     </div>
     <div class="row">
       <span class="label">Loading 按钮：</span>
-      <do-button :loading="isLoading" @click="isLoading = !isLoading">默认按钮</do-button>
-      <do-button type="primary" :loading="isLoading" @click="isLoading = !isLoading">主要按钮</do-button>
-      <do-button type="error" :loading="isLoading" @click="isLoading = !isLoading">警告按钮</do-button>
+      <do-button :loading="isLoading">主要按钮</do-button>
+      <do-button type="primary" :loading="isLoading" bright>主要按钮</do-button>
+      <do-button type="error" :loading="isLoading">警告按钮</do-button>
+      <do-button type="error" :loading="isLoading" bright>警告按钮</do-button>
     </div>
     <h2>倒计时</h2>
     <div class="row">
@@ -44,20 +47,19 @@
         <do-button>下一页</do-button>
       </do-button-group>
       <do-button-group style="margin-right: 20px; margin-bottom: 20px;">
-        <do-button type="primary">上一页</do-button>
-        <do-button type="primary">当前页</do-button>
-        <do-button type="primary">下一页</do-button>
+        <do-button type="primary" bright>上一页</do-button>
+        <do-button type="primary" bright>当前页</do-button>
+        <do-button type="primary" bright>下一页</do-button>
       </do-button-group>
-      <do-button-group>
+      <do-button-group style="margin-right: 20px; margin-bottom: 20px;">
         <do-button type="error">上一页</do-button>
         <do-button type="error">当前页</do-button>
         <do-button type="error">下一页</do-button>
       </do-button-group>
-      <do-button-group>
-        <div />
-        <do-button>上一页</do-button>
-        <do-button>当前页</do-button>
-        <do-button>下一页</do-button>
+      <do-button-group style="margin-right: 20px; margin-bottom: 20px;">
+        <do-button type="error" bright>上一页</do-button>
+        <do-button type="error" bright>当前页</do-button>
+        <do-button type="error" bright>下一页</do-button>
       </do-button-group>
       <do-button-group />
     </div>
@@ -80,7 +82,7 @@ export default {
   },
   data() {
     return {
-      isLoading: false,
+      isLoading: true,
       isCount: false
     }
   },

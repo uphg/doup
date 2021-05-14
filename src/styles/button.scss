@@ -9,6 +9,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
   [class*=do-icon]+span {
     margin-left: 5px;
   }
@@ -18,16 +19,14 @@
 }
 
 .do-button {
-  &__default {
+  &:focus{
+    outline: none;
+  }
+  &__primary {
     color: $__color-text-primary;
     background-color: #fff;
     border-color: $__border-color;
-    &:focus{
-      outline: none;
-      color: $__color-primary-dark;
-      border-color: $__color-primary-dark;
-    }
-    &:hover {
+    &:hover, &:focus {
       color: $__color-primary;
       border-color: $__color-primary;
     }
@@ -40,16 +39,11 @@
       border-color: $__color-text-looming;
     }
   }
-  &__primary {
+  &__primary.is-bright {
     color: #fff;
     background-color: $__color-primary;
     border-color: $__color-primary;
-    &:focus{
-      outline: none;
-      background-color: $__color-primary-light;
-      border-color: $__color-primary-light;
-    }
-    &:hover {
+    &:hover, &:focus {
       background-color: $__color-primary-light;
       border-color: $__color-primary-light;
     }
@@ -63,15 +57,27 @@
     }
   }
   &__error {
+    color: $__color-error;
+    background-color: #fff;
+    border-color: $__color-error;
+    &:hover, &:focus{
+      color: $__color-error-light;
+      border-color: $__color-error-light;
+    }
+    &:active {
+      color: $__color-error-dark;
+      border-color: $__color-error-dark;
+    }
+    &.is-loading {
+      color: $__color-error-light;
+      border-color: $__color-error-light;
+    }
+  }
+  &__error.is-bright {
     color: #fff;
     background-color: $__color-error;
     border-color: $__color-error;
-    &:focus{
-      outline: none;
-      background-color: $__color-error-light;
-      border-color: $__color-error-light;
-    }
-    &:hover {
+    &:hover, &:focus {
       background-color: $__color-error-light;
       border-color: $__color-error-light;
     }
@@ -85,12 +91,6 @@
     }
   }
 }
-.do-button__primary {
-  color: #fff;
-  background-color: $__color-primary;
-  border-color: $__color-primary;
-}
-
 
 @keyframes spin {
   0% {

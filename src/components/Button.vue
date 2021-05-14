@@ -1,5 +1,13 @@
 <template>
-  <button class="do-button" :class="{ 'is-loading': loading, [`do-button__${type}`]: type }" @click="$emit('click')">
+  <button
+    class="do-button"
+    :class="{
+      'is-loading': loading,
+      [`do-button__${type}`]: type,
+      'is-bright': bright
+    }"
+    @click="$emit('click')"
+  >
     <svg v-if="icon && !loading" :class="{ [`do-icon-${icon}`]: icon }" aria-hidden="true">
       <use :xlink:href="`#icon-${icon}`" />
     </svg>
@@ -15,6 +23,10 @@
 export default {
   name: 'DoButton',
   props: {
+    bright: {
+      type: Boolean,
+      default: false
+    },
     icon: {
       type: String,
       default: ''
@@ -25,9 +37,9 @@ export default {
     },
     type: {
       type: String,
-      default: 'default',
+      default: 'primary',
       validator(value) {
-        return value === 'default' || value === 'primary' || value === 'error'
+        return value === 'primary' || value === 'error'
       }
     }
   }

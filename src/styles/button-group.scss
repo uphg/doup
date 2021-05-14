@@ -16,11 +16,11 @@
       border-top-right-radius: $__border-radius;
       border-bottom-right-radius: $__border-radius;
     }
-    &:hover {
+    &:hover, &:focus {
       position: relative;
       z-index: 1;
     }
-    &__primary, &__error {
+    &__primary.is-bright, &__error.is-bright {
       &:not(:first-child, :last-child) {
         border-left-color: $__border-color;
         border-right-color: $__border-color;
