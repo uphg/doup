@@ -9,34 +9,39 @@
 export default {
   name: 'DoCountdown',
   props: {
-    count: {
+    beginSecond: {
       type: Number,
       default: 60
+    },
+    prompt: {
+      type: String,
+      default: '秒后重试'
     }
   },
   data() {
     return {
-      currentTime: this.count,
+      currentTime: this.beginSecond,
       disable: false
     }
   },
   computed: {
     currentText() {
-      return !this.disable ? '获取验证码' : this.currentTime + '秒后重试'
+      const { disable, currentTime, prompt } = this
+      return !disable ? '获取验证码' : currentTime + prompt
     }
   },
   methods: {
     startCount() {
-      if (this.currentTime >= this.count && !this.disable) {
+      if (this.currentTime >= this.beginSecond && !this.disable) {
         this.disable = true
-        this.$emit('count-open')
+        this.$emit('count-start')
         this.clock()
       }
     },
     clock() {
       if (this.currentTime <= 0) {
         this.disable = false
-        this.currentTime = this.count
+        this.currentTime = this.beginSecond
         this.$emit('count-end')
         return false
       }

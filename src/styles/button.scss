@@ -13,16 +13,16 @@
   [class*=do-icon]+span {
     margin-left: 5px;
   }
-  & > .do-icon-loading {
-    animation: spin 1s cubic-bezier(.6, 0, .4, 1) infinite;
-  }
+  // & > .do-icon-loading {
+  //   animation: spin 1s cubic-bezier(.6, 0, .4, 1) infinite;
+  // }
 }
 
 .do-button {
   &:focus{
     outline: none;
   }
-  &__primary {
+  &__default {
     color: $__color-text-primary;
     background-color: #fff;
     border-color: $__border-color;
@@ -36,27 +36,10 @@
     }
     &.is-loading {
       color: $__color-text-looming;
-      border-color: $__color-text-looming;
+      border-color: $__border-color-light;
     }
   }
-  &__primary.is-bright {
-    color: #fff;
-    background-color: $__color-primary;
-    border-color: $__color-primary;
-    &:hover, &:focus {
-      background-color: $__color-primary-light;
-      border-color: $__color-primary-light;
-    }
-    &:active {
-      background-color: $__color-primary-dark;
-      border-color: $__color-primary-dark;
-    }
-    &.is-loading {
-      background-color: $__color-primary-light;
-      border-color: $__color-primary-light;
-    }
-  }
-  &__error {
+  &__default.is-error {
     color: $__color-error;
     background-color: #fff;
     border-color: $__color-error;
@@ -73,7 +56,24 @@
       border-color: $__color-error-light;
     }
   }
-  &__error.is-bright {
+  &__primary {
+    color: #fff;
+    background-color: $__color-primary;
+    border-color: $__color-primary;
+    &:hover, &:focus {
+      background-color: $__color-primary-light;
+      border-color: $__color-primary-light;
+    }
+    &:active {
+      background-color: $__color-primary-dark;
+      border-color: $__color-primary-dark;
+    }
+    &.is-loading {
+      background-color: $__color-primary-light;
+      border-color: $__color-primary-light;
+    }
+  }
+  &__primary.is-error {
     color: #fff;
     background-color: $__color-error;
     border-color: $__color-error;

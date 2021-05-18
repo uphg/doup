@@ -20,7 +20,7 @@
       position: relative;
       z-index: 1;
     }
-    &__primary.is-bright, &__error.is-bright {
+    &__primary {
       &:not(:first-child, :last-child) {
         border-left-color: $__border-color;
         border-right-color: $__border-color;
